@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'post/destroy/:id' => 'post#destroy'
 
-  get 'post/modify/:id' => 'post#modify'
+  get 'post/edit/:id' => 'post#edit'
   get 'post/update/:id' => 'post#update'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -42,7 +42,7 @@ class PostController < ApplicationController
     redirect_to '/'
   end
 
-  def modify
+  def edit
     @post = Post.find(params[:id])
   end
 
