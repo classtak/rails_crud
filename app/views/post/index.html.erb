@@ -11,6 +11,7 @@ https://getbootstrap.com/docs/4.0/content/tables/#examples -->
       <th scope="col">제목</th>
       <th scope="col">내용</th>
       <th scope="col">작성시간</th>
+      <th scope="col">보기</th>
     </tr>
   </thead>
   <tbody>
@@ -21,6 +22,7 @@ https://getbootstrap.com/docs/4.0/content/tables/#examples -->
       <td><%= post.title %></td>
       <td><%= post.content %></td>
       <td><%= post.created_at %></td>
+      <td><a href="/post/show/<%= post.id %>">보기</a></td>
     </tr>
     <% end %>
   </tbody>

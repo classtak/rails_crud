@@ -26,4 +26,10 @@ class PostController < ApplicationController
 
     redirect_to '/'
   end
+
+  def show
+    # 어떤 글을 보여주겠다.
+    # @변수를 통해서 erb 파일에서 보여준다.
+    @post = Post.find(params[:id])
+  end
 end
