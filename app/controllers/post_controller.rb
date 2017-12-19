@@ -41,4 +41,31 @@ class PostController < ApplicationController
     # '/' 루트페이지로 보낸다.
     redirect_to '/'
   end
+
+  def modify
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    post = Post.find(params[:id])
+    # 방법1
+    post.update(
+      username: params[:username],
+      title: params[:title],
+      content: params[:content]
+    )
+    # # 방법1-1
+    # post.update(
+    #   :username => params[:username],
+    #   :title => params[:title],
+    #   :content => params[:content]
+    # )
+    # # 방법2
+    # post.username = params[:username]
+    # post.title = params[:title]
+    # post.content = params[:content]
+    # post.save
+
+    redirect_to "/post/show/#{params[:id]}"
+  end
 end
