@@ -32,4 +32,13 @@ class PostController < ApplicationController
     # @변수를 통해서 erb 파일에서 보여준다.
     @post = Post.find(params[:id])
   end
+
+  def destroy
+    # @id = params[:id]
+    # post = Post.find(@id)
+    # post.destroy
+    Post.find(params[:id]).destroy
+    # '/' 루트페이지로 보낸다.
+    redirect_to '/'
+  end
 end
