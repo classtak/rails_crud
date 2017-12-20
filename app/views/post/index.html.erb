@@ -25,7 +25,7 @@ https://getbootstrap.com/docs/4.0/content/tables/#examples -->
       <td><%= post.content[0,10] %></td>
       <td><%= post.created_at %></td>
       <td><a href="/post/show/<%= post.id %>">보기</a></td>
-      <td><a href="/post/destroy/<%= post.id %>">삭제</a></td>
+      <td><a data-confirm="정말 지울거니.." data-method="delete" href="/post/destroy/<%= post.id %>">삭제</a></td>
       <td><a href="/post/edit/<%= post.id %>">수정</a></td>
     </tr>
     <% end %>
