@@ -32,6 +32,7 @@ class PostController < ApplicationController
     # 어떤 글을 보여주겠다.
     # @변수를 통해서 erb 파일에서 보여준다.
     @post = Post.find(params[:id])
+    @comments = Comment.all
   end
 
   def destroy
@@ -68,5 +69,13 @@ class PostController < ApplicationController
     # post.save
 
     redirect_to "/post/show/#{params[:id]}"
+  end
+
+  def add_comment
+    Comment.create(
+      content: params[:content],
+      post_id: params[:id]
+    )
+    redirect_to :back
   end
 end
