@@ -22,7 +22,7 @@ https://getbootstrap.com/docs/4.0/content/tables/#examples -->
       <th scope="row"><%= post.id %></th>
       <td><%= post.username %></td>
       <td><%= post.title %></td>
-      <td><%= post.content %></td>
+      <td><%= post.content[0,10] %></td>
       <td><%= post.created_at %></td>
       <td><a href="/post/show/<%= post.id %>">보기</a></td>
       <td><a href="/post/destroy/<%= post.id %>">삭제</a></td>

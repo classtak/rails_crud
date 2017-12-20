@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # get 'post/index' => 'post#index'
 
   get 'post/new'
-  get 'post/create'
+  post 'post/create'
 
   get 'post/show/:id' => 'post#show'
 

@@ -23,7 +23,8 @@ class PostController < ApplicationController
     # post.title = params[:title]
     # post.content = params[:content]
     # post.save
-
+    # redirect_to '/'
+    @name = params[:name]
     redirect_to '/'
   end
 

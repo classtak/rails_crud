@@ -19,3 +19,18 @@
   * 내용 : content
 
 #### CRUD 기초!
+
+## 실습
+**반드시 프로젝트 새로 파주세요**
+**오늘 프로젝트는 내일 이어서 할 예정입니다 :)**
+# rails new _____
+
+# controller User
+
+index
+* C - new create
+* R - show
+* U - update edit
+* D - destroy
+
+# model User
